@@ -6,7 +6,7 @@
 # Change 1..1 below to 1..last_test_to_print .
 # (It may become useful if the test is moved to ./t subdirectory.)
 
-BEGIN { $| = 1; print "1..1\n"; }
+BEGIN { $| = 1; print "1..2\n"; }
 END {print "not ok 1\n" unless $loaded;}
 use ConfInt;
 $loaded = 1;
@@ -21,5 +21,10 @@ print "ok 1\n";
 use ConfInt;
 @ValueArray = (1,1,1,1,1,2,3,2,1,1,1,1,2,1);
 $ReturnValue = &ConfInt::ConfInt(0.05,\@ValueArray);
-print "\n" . "$ReturnValue" . "\n";
-print "ok 13";
+
+if ($ReturnValue eq '26.9395231494888') {
+print "ok 2" . "\n";
+}
+else {
+print "not ok 2" . "\n";
+}

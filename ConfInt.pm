@@ -35,7 +35,7 @@ EXAMPLE:
         $ReturnValue = &ConfInt::ConfInt(0.05,\@ValueArray);
         print "$ReturnValue";
  
-=head2 EXPORT
+=head1 EXPORT
  
 Returns the relative error of a summary of values.
  
@@ -67,7 +67,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(
  
 );
-our $VERSION = '1.0';
+our $VERSION = '1.0.1';
 
 # ###########################
 # ## Begin of ConfInt Code ##
